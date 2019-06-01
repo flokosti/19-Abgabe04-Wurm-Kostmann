@@ -11,7 +11,6 @@ Task List (Example)
 - [ ]  Project review (Queue)
   - [ ] Find three errors
   - [ ] Optimize Queue
-  - [ ] If necessary
 - [ ] Comments with Javadoc API for class files and methods
   - [ ] Integrate an image in the report
 - [ ] Write JUnit Test-Cases
