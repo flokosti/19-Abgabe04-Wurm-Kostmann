@@ -8,7 +8,7 @@
 
 Task List (Example)
 
-###- [ ] Project review (Queue)
+- [ ]  Project review (Queue)
   - [ ] Find three errors
   - [ ] Optimize Queue
   - [ ] If necessary
