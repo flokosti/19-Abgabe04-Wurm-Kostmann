@@ -8,7 +8,7 @@
 
 Task List (Example)
 
-- [ ] Project review (Queue)
+###- [ ] Project review (Queue)
   - [ ] Find three errors
   - [ ] Optimize Queue
   - [ ] If necessary
@@ -24,4 +24,4 @@ Task List (Example)
 - [ ] Maven Site Documentation
   - [ ] Integrate Javadoc and JUnit Test-Cases
   - [ ] Integrate menu with reference to manually generated sites
-- [ ] Finally update readme.md for labreport 
+- [ ] Finally update readme.md for labreport
