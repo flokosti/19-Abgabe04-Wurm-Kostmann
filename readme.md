@@ -9,8 +9,7 @@
 Task List (Example)
 
 - [ ]  Project review (Queue)
-  - [ ] Find three errors
-  - [ ] Optimize Queue
+  - [x] Find three errors
 - [ ] Comments with Javadoc API for class files and methods
   - [ ] Integrate an image in the report
 - [ ] Write JUnit Test-Cases
