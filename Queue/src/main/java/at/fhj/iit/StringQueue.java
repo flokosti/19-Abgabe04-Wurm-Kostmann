@@ -4,29 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-// there's some Bugs included, try to debug the code and fix the Bugs
-// there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
 public class StringQueue implements Queue {
-	
+
+	/**
+	 * StringQueue based on an ArrayList but with a maximum size.
+	 * There are several methods for adding and removing elements from the Queue.
+	 */
+
 	private List<String> elements = new ArrayList<String>();
 	private int maxSize;
 
+	/**
+	 * Constructor initializes StringQueue with
+	 *
+	 * @param maxSize --> maximum number of elements
+	 */
 	public StringQueue(int maxSize){
 		this.maxSize = maxSize;
 	}
-	
+
+	/**
+	 * Adds elements to the Queue
+	 * @param obj --> String object
+	 * @return true if addition is successful.
+	 */
 	@Override
 	public boolean offer(String obj) {
-		if(elements.size()!= maxSize)
+		if(elements.size()!= maxSize) {
 			elements.add(obj);
-		else
+			return true;
+		}else {
 			return false;
-		
-		return true;
+		}
 	}
 
+	/**
+	 * Returns peek elements and deletes it.
+	 * @return --> peek element.
+	 */
 	@Override
 	public String poll() {
 		String element = peek();
@@ -38,6 +55,11 @@ public class StringQueue implements Queue {
 		return element;
 	}
 
+	/**
+	 * Returns peek element and deletes it.
+	 * Also throws NoSuchElementException if Queue is empty.
+	 * @return --> peek element.
+	 */
 	@Override
 	public String remove() {
 		String element = poll();
@@ -48,6 +70,10 @@ public class StringQueue implements Queue {
 		return element;
 	}
 
+	/**
+	 * Returns peek element.
+	 * @return --> peek element or null.
+	 */
 	@Override
 	public String peek() {
 		String element;
@@ -59,6 +85,11 @@ public class StringQueue implements Queue {
 		return element;
 	}
 
+	/**
+	 * Returns peek element.
+	 * Also throws NoSuchElementException if Queue is empty.
+	 * @return --> peek element.
+	 */
 	@Override
 	public String element() {
 		String element = peek();
