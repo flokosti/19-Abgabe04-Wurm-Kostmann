@@ -32,11 +32,21 @@ public class StringQueueTest {
     }
 
     @Test
-    public void test3() {
+    public void testOverflow() {
+        Assert.assertTrue(q.offer("Obj1"));
+        Assert.assertTrue(q.offer("Obj2"));
+        Assert.assertTrue(q.offer("Obj3"));
+        Assert.assertTrue(q.offer("Obj4"));
+        Assert.assertTrue(q.offer("Obj5"));
+        Assert.assertFalse(q.offer("Obj6"));
     }
 
     @Test
-    public void test4() {
+    public void testPeekElement() {
+        q.offer("Obj1");
+        q.offer("Obj2");
+        q.offer("Obj3");
+        Assert.assertEquals("Obj1", q.peek());
     }
 
     @Test
