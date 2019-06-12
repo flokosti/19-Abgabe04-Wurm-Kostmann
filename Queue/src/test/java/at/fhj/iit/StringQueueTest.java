@@ -52,14 +52,14 @@ public class StringQueueTest {
         q.offer("Obj4");
         q.offer("Obj5");
 
-        Assert.assertEquals("Obj1",q.remove());
-        Assert.assertEquals("Obj2",q.remove());
-        Assert.assertEquals("Obj3",q.remove());
-        Assert.assertEquals("Obj4",q.remove());
-        Assert.assertEquals("Obj5",q.remove());
+        Assert.assertEquals("Obj1", q.remove());
+        Assert.assertEquals("Obj2", q.remove());
+        Assert.assertEquals("Obj3", q.remove());
+        Assert.assertEquals("Obj4", q.remove());
+        Assert.assertEquals("Obj5", q.remove());
     }
 
-    @Test   (expected = NoSuchElementException.class)
+    @Test(expected = NoSuchElementException.class)
     public void testRemoveFromEmptyQueue() {
         q.remove();
     }
@@ -69,7 +69,7 @@ public class StringQueueTest {
         q.offer("Obj1");
         q.offer("Obj2");
         q.offer("Obj3");
-        Assert.assertEquals("Obj1", q.peek());
+        Assert.assertEquals(q.peek(), "Obj1");
     }
 
     @Test
@@ -89,11 +89,18 @@ public class StringQueueTest {
     }
 
     @Test
-    public void test10() {
+    public void testChangeQueueSize() {
+        q = new StringQueue(4);
+        Assert.assertTrue(q.offer("Obj1"));
+        Assert.assertTrue(q.offer("Obj2"));
+        Assert.assertTrue(q.offer("Obj3"));
+        Assert.assertTrue(q.offer("Obj4"));
+        Assert.assertFalse(q.offer("Obj5"));
     }
 
     @After
     public void tearDown() throws Exception {
-
+        q=null;
+        Assert.assertNull(q);
     }
 }
