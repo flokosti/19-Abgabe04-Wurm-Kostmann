@@ -136,7 +136,6 @@ public class StringQueueTest {
     /**
      * Reset queue to null.
      */
-
     @After
     public void tearDown(){
         q=null;

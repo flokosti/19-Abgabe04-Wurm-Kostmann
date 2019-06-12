@@ -8,12 +8,12 @@
 
 Task List (Example)
 
-- [ ]  Project review (Queue)
+- [x]  Project review (Queue)
   - [x] Find three errors
-- [ ] Comments with Javadoc API for class files and methods
+- [x] Comments with Javadoc API for class files and methods
   - [ ] Integrate an image in the report
-- [ ] Write JUnit Test-Cases
-  - [ ] Comment Test-Cases with Javadoc API
+- [x] Write JUnit Test-Cases
+  - [x] Comment Test-Cases with Javadoc API
   - [ ] Integratean image in the report
 - [ ] Adapt pom.xml
   - [ ] Integrate log4j library as maven-dependency
