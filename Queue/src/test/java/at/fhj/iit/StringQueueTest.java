@@ -17,13 +17,8 @@ public class StringQueueTest {
         q = new StringQueue(5);
     }
 
-    @Test(expected = NoSuchElementException.class)
-    public void testGetElementFromEmptyQueue() {
-        q.element();
-    }
-
     @Test
-    public void testAddElements() {
+    public void testOfferAddElements() {
         Assert.assertTrue(q.offer("Obj1"));
         Assert.assertTrue(q.offer("Obj2"));
         Assert.assertTrue(q.offer("Obj3"));
@@ -33,7 +28,7 @@ public class StringQueueTest {
     }
 
     @Test
-    public void testOverflow() {
+    public void testOfferOverflow() {
         Assert.assertTrue(q.offer("Obj1"));
         Assert.assertTrue(q.offer("Obj2"));
         Assert.assertTrue(q.offer("Obj3"));
@@ -43,15 +38,14 @@ public class StringQueueTest {
     }
 
     @Test
-    public void testPeekElement() {
+    public void testPoll() {
         q.offer("Obj1");
-        q.offer("Obj2");
-        q.offer("Obj3");
-        Assert.assertEquals("Obj1", q.peek());
+        Assert.assertEquals("Obj1", q.poll());
     }
 
+
     @Test
-    public void testRemove() {
+    public void testRemoveElement() {
         q.offer("Obj1");
         q.offer("Obj2");
         q.offer("Obj3");
@@ -71,15 +65,27 @@ public class StringQueueTest {
     }
 
     @Test
-    public void test7() {
+    public void testPeekElement() {
+        q.offer("Obj1");
+        q.offer("Obj2");
+        q.offer("Obj3");
+        Assert.assertEquals("Obj1", q.peek());
     }
 
     @Test
-    public void test8() {
+    public void testGetPeekFromEmptyQueue() {
+        Assert.assertEquals(null, q.peek());
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void testGetElementFromEmptyQueue() {
+        q.element();
     }
 
     @Test
-    public void test9() {
+    public void testGetElement() {
+        q.offer("Obj1");
+        Assert.assertEquals("Obj1", q.element());
     }
 
     @Test
