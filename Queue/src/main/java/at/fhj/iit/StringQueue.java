@@ -21,7 +21,7 @@ public class StringQueue implements Queue {
 	/**
 	 * Constructor initializes StringQueue with
 	 *
-	 * @param maxSize --> maximum number of elements
+	 * @param maxSize maximum number of elements
 	 */
 	public StringQueue(int maxSize){
 		logger.info("Calling constructor()");
@@ -30,7 +30,7 @@ public class StringQueue implements Queue {
 
 	/**
 	 * Adds elements to the Queue
-	 * @param obj --> String object
+	 * @param obj String object
 	 * @return true if addition is successful.
 	 */
 	@Override
@@ -46,7 +46,7 @@ public class StringQueue implements Queue {
 
 	/**
 	 * Returns peek elements and deletes it.
-	 * @return --> peek element.
+	 * @return peek element.
 	 */
 	@Override
 	public String poll() {
@@ -63,7 +63,7 @@ public class StringQueue implements Queue {
 	/**
 	 * Returns peek element and deletes it.
 	 * Also throws NoSuchElementException if Queue is empty.
-	 * @return --> peek element.
+	 * @return peek element.
 	 */
 	@Override
 	public String remove() {
@@ -79,7 +79,7 @@ public class StringQueue implements Queue {
 
 	/**
 	 * Returns peek element.
-	 * @return --> peek element or null.
+	 * @return peek element or null.
 	 */
 	@Override
 	public String peek() {
@@ -96,7 +96,7 @@ public class StringQueue implements Queue {
 	/**
 	 * Returns peek element.
 	 * Also throws NoSuchElementException if Queue is empty.
-	 * @return --> peek element.
+	 * @return peek element.
 	 */
 	@Override
 	public String element() {
