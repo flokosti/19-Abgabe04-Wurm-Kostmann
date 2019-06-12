@@ -64,6 +64,9 @@ public class StringQueueTest {
         q.remove();
     }
 
+    /**
+     *
+     */
     @Test
     public void testPeekElement() {
         q.offer("Obj1");
@@ -77,17 +80,26 @@ public class StringQueueTest {
         Assert.assertEquals(null, q.peek());
     }
 
+    /**
+     * Test if NoSuchElementException is thrown, if queue is empty.
+     */
     @Test(expected = NoSuchElementException.class)
     public void testGetElementFromEmptyQueue() {
         q.element();
     }
 
+    /**
+     * Test if element method returns peek element.
+     */
     @Test
     public void testGetElement() {
         q.offer("Obj1");
         Assert.assertEquals("Obj1", q.element());
     }
 
+    /**
+     * Change size of queue and add elements.
+     */
     @Test
     public void testChangeQueueSize() {
         q = new StringQueue(4);
@@ -98,8 +110,12 @@ public class StringQueueTest {
         Assert.assertFalse(q.offer("Obj5"));
     }
 
+    /**
+     * Reset queue to null.
+     */
+
     @After
-    public void tearDown() throws Exception {
+    public void tearDown(){
         q=null;
         Assert.assertNull(q);
     }
