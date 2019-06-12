@@ -11,13 +11,14 @@ import java.util.NoSuchElementException;
 public class StringQueueTest {
 
     public StringQueue q;
+
     @Before
     public void setUp() throws Exception {
-        q=new StringQueue(5);
+        q = new StringQueue(5);
     }
 
-    @Test (expected = NoSuchElementException.class)
-    public void testIsEmpty() {
+    @Test(expected = NoSuchElementException.class)
+    public void testGetElementFromEmptyQueue() {
         q.element();
     }
 
@@ -50,11 +51,23 @@ public class StringQueueTest {
     }
 
     @Test
-    public void test5() {
+    public void testRemove() {
+        q.offer("Obj1");
+        q.offer("Obj2");
+        q.offer("Obj3");
+        q.offer("Obj4");
+        q.offer("Obj5");
+
+        Assert.assertEquals("Obj1",q.remove());
+        Assert.assertEquals("Obj2",q.remove());
+        Assert.assertEquals("Obj3",q.remove());
+        Assert.assertEquals("Obj4",q.remove());
+        Assert.assertEquals("Obj5",q.remove());
     }
 
-    @Test
-    public void test6() {
+    @Test   (expected = NoSuchElementException.class)
+    public void testRemoveFromEmptyQueue() {
+        q.remove();
     }
 
     @Test
