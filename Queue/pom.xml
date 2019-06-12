@@ -5,25 +5,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>at.fhj.iit</groupId>
-    <artifactId>StringQueue</artifactId>
-    <version>2.0</version>
+    <artifactId>Queue</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-	<developers>
-		<developer>
-		  <id>flokosti</id>
-		  <name>Florian Kostmann</name>
-		  <email>florian.kostmann@edu.fh-joanneum.at</email>
-		  <url>none</url>
-		  <organization>FH JOANNEUM GmbH</organization>
-		  <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
-		  <roles>
-			<role>Student</role>
-		  </roles>
-		  <timezone>Europe/Vienna</timezone>
-		  <properties>
-			<picUrl></picUrl>
-		  </properties>
-		</developer>
+    <properties>
+        <project.build.inputEncoding>UTF-8</project.build.inputEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>flokosti</id>
+            <name>Florian Kostmann</name>
+            <email>florian.kostmann@edu.fh-joanneum.at</email>
+            <url>none</url>
+            <organization>FH JOANNEUM GmbH</organization>
+            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+            <properties>
+                <picUrl></picUrl>
+            </properties>
+        </developer>
         <developer>
             <id>leowurm</id>
             <name>Leopold Wurm</name>
@@ -47,10 +53,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
-                <configuration>
-                    <release>11</release>
-                </configuration>
             </plugin>
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
@@ -59,28 +63,8 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.11.2</version>
-  </dependency>
-  <dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.11.2</version>
-  </dependency>
-    </dependencies>
-
     <reporting>
         <plugins>
-
             <!-- maven site for documentation -->
             <!-- manual upgraded maven site plugin, because 3.3 had an error -->
             <plugin>
@@ -88,20 +72,18 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.7.1</version>
             </plugin>
-
             <!-- reporting project information -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
-
-            <!-- java doc support for maven site -->
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.0</version>
                 <reportSets>
-
                     <!-- reports our javadocs in our src code and test code -->
                     <reportSet>
                         <reports>
@@ -109,7 +91,6 @@
                             <report>test-javadoc</report>
                         </reports>
                     </reportSet>
-
                     <!-- aggregate reportSet, to define in poms having modules -->
                     <reportSet>
                         <id>aggregate</id>
@@ -120,31 +101,45 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-
             <!-- integrate test results -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M3</version>
             </plugin>
-
             <!-- Cross References -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.0.0</version>
             </plugin>
-
-            <!-- integrate test Code Coverage -->
-            <plugin>
-                <artifactId>maven-clover-plugin</artifactId>
-            </plugin>
-
         </plugins>
     </reporting>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+    </dependencies>
 
     <!-- define SCM and will be read by generating maven site -->
     <scm>
         <connection>scm:git:https://github.com/MrTinGonic/19-Abgabe04-Wurm-Kostmann.git</connection>
-        <developerConnection>scm:git:https://github.com/MrTinGonic/19-Abgabe04-Wurm-Kostmann.git</developerConnection>
         <tag>HEAD</tag>
         <url>https://github.com/MrTinGonic/19-Abgabe04-Wurm-Kostmann.git</url>
     </scm>
@@ -158,5 +153,4 @@
             <comments>I care about sharing improvements.</comments>
         </license>
     </licenses>
-
 </project>
