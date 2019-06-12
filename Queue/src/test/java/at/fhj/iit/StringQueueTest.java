@@ -1,22 +1,29 @@
 package at.fhj.iit;
 
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.NoSuchElementException;
 
+/**
+ * JUnit tests for a StringQueue
+ */
 public class StringQueueTest {
 
     public StringQueue q;
 
+    /**
+     * Initializing StringQueue with 5 Elements
+     */
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         q = new StringQueue(5);
     }
 
+    /**
+     * Test if adding Elements works correctly
+     */
     @Test
     public void testOfferAddElements() {
         Assert.assertTrue(q.offer("Obj1"));
@@ -27,6 +34,9 @@ public class StringQueueTest {
 
     }
 
+    /**
+     * Test overflow from StringQueue
+     */
     @Test
     public void testOfferOverflow() {
         Assert.assertTrue(q.offer("Obj1"));
@@ -37,13 +47,20 @@ public class StringQueueTest {
         Assert.assertFalse(q.offer("Obj6"));
     }
 
+    /**
+     * Test if poll returns first element
+     * Also if poll deletes it
+     */
     @Test
     public void testPoll() {
         q.offer("Obj1");
         Assert.assertEquals("Obj1", q.poll());
+        Assert.assertNull(q.peek());
     }
 
-
+    /**
+     * Test if remove works with max Queue size
+     */
     @Test
     public void testRemoveElement() {
         q.offer("Obj1");
@@ -59,13 +76,16 @@ public class StringQueueTest {
         Assert.assertEquals("Obj5", q.remove());
     }
 
+    /**
+     * Test if remove throws exception if Queue is empty
+     */
     @Test(expected = NoSuchElementException.class)
     public void testRemoveFromEmptyQueue() {
         q.remove();
     }
 
     /**
-     *
+     * Test if peek returns the first added element
      */
     @Test
     public void testPeekElement() {
@@ -75,6 +95,9 @@ public class StringQueueTest {
         Assert.assertEquals(q.peek(), "Obj1");
     }
 
+    /**
+     * Check if peek returns null if queue is empty
+     */
     @Test
     public void testGetPeekFromEmptyQueue() {
         Assert.assertEquals(null, q.peek());
