@@ -2,6 +2,14 @@
 
 **EDUCATION Repository**
 
+**Aufgabe 04**
+
+Florian Kostmann
+
+Leopold Wurm
+
+
+
 ## Test Automation with JUnit ##
 
 ### Queue Exercise ###
@@ -15,10 +23,10 @@ Task List (Example)
 - [x] Write JUnit Test-Cases
   - [x] Comment Test-Cases with Javadoc API
   - [ ] Integratean image in the report
-- [ ] Adapt pom.xml
-  - [ ] Integrate log4j library as maven-dependency
-- [ ] Implement log4j
-  - [ ] Static logger
+- [x] Adapt pom.xml
+  - [x] Integrate log4j library as maven-dependency
+- [x] Implement log4j
+  - [x] Static logger
 - [ ] Maven Site Documentation
   - [ ] Integrate Javadoc and JUnit Test-Cases
   - [ ] Integrate menu with reference to manually generated sites
