@@ -34,7 +34,7 @@ Die Übung dient als Repetitorium aller bereits absolvierten Übungen. Die readm
   - [x] Integrate menu with reference to manually generated sites
 - [x] Finally update readme.md for Lab Report
   - [x] Integrate Codeblock
-  - [ ] Export pdf
+  - [x] Export pdf
 
 ## Vorgehen ##
 
