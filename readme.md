@@ -1,7 +1,7 @@
 
-#Abgabe 04: Vertiefende Gesamtwiederholung
+# Abgabe 04: Vertiefende Gesamtwiederholung #
 
-###19-Abgabe04-Wurm-Kostmann 
+### 19-Abgabe04-Wurm-Kostmann ###
 
 Die Übung dient als Repetitorium aller bereits absolvierten Übungen. Die readme.md dient als Bereicht zur Abgabe 4.
 
@@ -36,15 +36,15 @@ Die Übung dient als Repetitorium aller bereits absolvierten Übungen. Die readm
   - [x] Integrate Codeblock
   - [ ] Export pdf
 
-## Vorgehen 
+## Vorgehen ##
 
-### Vorbereitungen 
+### Vorbereitungen ###
 
 Zuerst wurde die Taskliste im Markdown Format im readme.md hinzugefügt. Die Punkte wurden von der Aufgabenstellung
 übernommen. Anschließend wurde das "Musterprojekt" in IntelliJ importiert, ein Repository erstellt und ein
 initial commit von Florian durchgeführt. 
 
-###Project review
+### Project review ###
 **Fehlersuche**
 
 Die Fehler wurden im Team gesucht und gefunden.
@@ -57,7 +57,7 @@ Gefundene und korrigierte Fehler:
 
 Der Code wurde bei der Implementierung vom static logger mit mehr Klammern versehen.
 
-###JavaDoc
+### JavaDoc ###
 
 Die Kommentare wurden von beiden Teammitgliedern verfasst. Die Kommentare wurden zum Schluss noch einmal
 überarbeitet, da beim build einige Fehler auftraten und die Beschreibungen im Queue Interface bei den @param fehlten. 
@@ -68,7 +68,7 @@ Die Kommentare wurden von beiden Teammitgliedern verfasst. Die Kommentare wurden
 
 ![javadoc](media/javadoc.png)
 
-###JUnit Test Cases
+### JUnit Test Cases ###
 
 Für die JUnit Tests wir uns abgestimmt wer für welche Methoden Test Cases implementiert. 
 Die jeden der Test Cases wurden JavaDoc Kommentare hinzugefügt. 
@@ -91,7 +91,7 @@ Die jeden der Test Cases wurden JavaDoc Kommentare hinzugefügt.
 
 ![junitTests](media/tests.png)
 
-###pom.xml
+### pom.xml ###
 **Entwickler Informationen**
 
 Die pom.xml ist mit unseren spezifischen Informationen (Entwickler, Projektdaten usw.) erweitert worden.
@@ -100,7 +100,7 @@ Die pom.xml ist mit unseren spezifischen Informationen (Entwickler, Projektdaten
 
 Die log4j Bibliothek wurde in den Maven Dependencies hinzugefügt.
 
-###log4j Integration
+### log4j Integration ###
 
 Florian hat bei allen Methoden eine Info oder Error Lognachricht hinzugefügt. Diese werden über die konsole ausgegeben.
 
