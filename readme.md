@@ -106,5 +106,6 @@ Florian hat bei allen Methoden eine Info oder Error Lognachricht hinzugefügt. D
 
 ![log4j](media/log4j_konsole.png)
 
+### Maven Site Documentation ###
 
-
+![mavenSite](media/site.png)
