@@ -45,7 +45,7 @@ public class StringQueue implements Queue {
 	}
 
 	/**
-	 * Returns peek elements and deletes it.
+	 * Returns peek element and deletes it.
 	 * @return peek element.
 	 */
 	@Override

@@ -1,0 +1,11 @@
+Principle of a Queue
+
+	A queue is a linear data structure in which items can be sorted and stored. It works with the FIFO (First-In-First-Out) principle, which means the first element added to the queue will be the first one to be removed.
+
+Methods
+
+	The offer method adds elements to the Queue, the poll method returns peek element and deletes it, the remove method returns peek element, deletes it and throws NoSuchElementException, the peek method returns peek element and the element method returns peek element and throws NoSuchElementException if Queue is empty.
+
+Testing
+
+	All methods are tested in the StringQueueTest class.
