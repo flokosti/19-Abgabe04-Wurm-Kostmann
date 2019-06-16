@@ -108,4 +108,6 @@ Florian hat bei allen Methoden eine Info oder Error Lognachricht hinzugefügt. D
 
 ### Maven Site Documentation ###
 
+Um in der Maven Site Documentation den Unterpunkt "About" mit Information zu befüllen, hat Leo eine index.apt (src/site/apt/index.apt) hinzugefügt und bearbeitet.
+
 ![mavenSite](media/site.png)
