@@ -5,13 +5,13 @@
 
 Die Übung dient als Repetitorium aller bereits absolvierten Übungen. Die readme.md dient als Bereicht zur Abgabe 4.
 
-**Team**
+**Team:**
 
 *Florian Kostmann*
 
 *Leopold Wurm*
 
-**Repository**
+**Repository:**
 
 [https://github.com/flokosti/19-Abgabe04-Wurm-Kostmann.git](https://github.com/flokosti/19-Abgabe04-Wurm-Kostmann.git)
 
